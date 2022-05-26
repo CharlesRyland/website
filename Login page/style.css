@@ -1,0 +1,121 @@
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    color:rgb(38, 37, 37);
+    /*justify-content: center;
+    align-items: center;*/
+}
+
+input {
+    font-family: inherit;
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    border: 1px solid rgb(38, 37, 37);
+    margin: 0.5rem 0rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+
+form {
+    /*width: 24vw;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 22%;
+    margin: 0em 0em;
+    transition: all 1.5s ease-in-out;
+}
+
+button {
+    font-family: inherit;
+    padding: 0.6rem 1rem;
+    float: left;
+    background-color: rgb(38, 37, 37);
+    border: none;
+    margin: 1rem;
+    border-radius: 0.4rem;
+    color: white;
+
+    transition: all 200ms ease-in-out;
+}
+button:hover{
+    background-color: rgb(0, 196, 0);
+}
+
+iframe {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+    border: none;
+}
+
+#welcome {
+display: block;
+text-align: left !important;
+margin: 1rem !important;
+font-size: 4rem !important;
+}
+
+#tasks {
+    margin: 1rem !important;
+    font-size: 2rem !important;
+
+}
+
+h6 {
+    margin: 1rem !important;
+    font-size: 1rem;
+
+}
+
+
+#taskArea {
+    resize: none;
+    width: 86%;
+    height: 150px;
+    margin: 1rem !important;
+    font-family: inherit;
+    padding:1rem;
+    border-radius: 0.8rem;
+    border: 1.5px solid black;
+
+}
+
+#areaContainer {
+    width: 30%;
+    overflow: hidden;
+ }
+
+li {
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+li:hover {
+    color: rgb(255, 92, 100);
+    cursor: pointer;
+}
+
+
+
+#taskUl {
+    width: 400px;
+}
+
+
+
+

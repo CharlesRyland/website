@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleLogin.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" action="">
+        <h1>Login</h1>
+        
+  
+        <label for="user">Username</label>
+        <input id="user" placeholder="Username" autocomplete="off" autofocus="on"/>
+  
+  
+        <label for="pass">Password</label>
+        <input id="pass" placeholder="Password" type="password" autocomplete="off"/>
+        
+
+        <button id="submit">Submit</button>
+      </form>
+
+      <script>
+        let user = document.getElementById("user");
+        let pass = document.getElementById("pass");
+        let submit = document.getElementById("submit");
+
+        submit.addEventListener('click', function(e) {
+            e.preventDefault()
+            if (user.value == 'CharlesR17' && pass.value == 'ballz') {
+                window.open('charles.html', '_self')
+            }
+            else if (user.value == 'Paul' && pass.value == 'caulk') {
+                window.open('robby.html', '_self')
+            }
+
+        })
+
+      </script>
+</body>
+</html>
