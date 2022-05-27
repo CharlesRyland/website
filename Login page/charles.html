@@ -4,77 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body onload="load()">
-    <h1 id="welcome">Welcome Bois!</h1>
-    <h2 id="tasks">Weekly Tasks:
-        <h6>Click to remove tasks</h6>
-    </h2>
-    <div id="areaContainer">
-    <textarea id="taskArea" placeholder="Type here..."></textarea>
-    <button id="addTask">Add Task</button>  
-    </div>
-    <iframe id="schedule" src="https://usepl.co/Spacebar/schedule.html" width="60%" height="70%"></iframe>
-    <ul id="taskUl">
-        
-    </ul>
-
-    <script>
-        let tasks = document.getElementById('taskUl')
-        let taskArea = document.getElementById('taskArea')
-        let addTask = document.getElementById('addTask')
-        let taskUl = document.getElementById('taskUl')
-        let x = 0
-        let y = 0
-        let toStorage = []
-
-
-        const storedvalue = JSON.parse(localStorage.getItem('items'));
-        addTask.onclick = addTasks
-
-        
-
-        function addTasks() {
-            let taskAdded = document.createElement('li')
-            taskAdded.setAttribute('id', x+=1)
-            taskAdded.setAttribute('onclick', 'remove(this)')
-            taskAdded.innerHTML = taskArea.value;
-            taskUl.appendChild(taskAdded)
-            toStorage.push(taskAdded.innerHTML)
-            localStorage.setItem('items', JSON.stringify(toStorage));
-            console.log(localStorage)
-            taskArea.value = ''
-        }
-
-        
-        function load() {
-            console.log(storedvalue.length)
-            
-            for(let i = 0; i < storedvalue.length; i++) {
-                if(storedvalue[i] == '') {
-                    continue
-                }
-                let storedTasks = document.createElement('li')
-                storedTasks.setAttribute('onclick', 'remove(this)')
-                storedTasks.setAttribute('id', y+=1)
-                storedTasks.innerHTML = storedvalue[i]
-                taskUl.appendChild(storedTasks)
-            }
-        }
-        function remove(link) { 
-            let str = localStorage['items']
-            str = str.replace(link.innerHTML, '')
-            console.log(str)
-            console.log(localStorage['items'])
-            taskUl.removeChild(link)
-            localStorage.setItem('items', str)
-        }
-
-    </script>
+<body>
+    
 </body>
 </html>
